@@ -1,6 +1,7 @@
 from pathlib import Path
 import json
 import importlib
+import os
 import joblib
 import numpy as np
 import pandas as pd
@@ -11,9 +12,15 @@ import streamlit as st
 from sklearn.impute import SimpleImputer
 
 try:
+    # Some Windows Python setups need stdlib distutils behavior for TensorFlow imports.
+    os.environ.setdefault("SETUPTOOLS_USE_DISTUTILS", "stdlib")
     _tf_spec = importlib.util.find_spec("tensorflow")
+    _keras_spec = importlib.util.find_spec("keras")
     if _tf_spec is not None:
         keras = importlib.import_module("tensorflow.keras")
+        HAS_TF = True
+    elif _keras_spec is not None:
+        keras = importlib.import_module("keras")
         HAS_TF = True
     else:
         HAS_TF = False
@@ -1030,12 +1037,19 @@ def main():
 
         st.subheader("Interactive Prediction")
 
-        model_options = list(models.keys())
+        model_options = list(data["model_registry"].keys())
         if not model_options:
-            st.error("No models loaded. Verify artifact files and dependencies, then reload the app.")
+            st.error("No models are registered. Verify artifact files and dependencies, then reload the app.")
             return
 
         model_name = st.selectbox("Select model", options=model_options)
+        if model_name not in models:
+            st.error(
+                f"`{model_name}` is registered but could not be loaded in this runtime. "
+                "Verify required dependencies are installed (TensorFlow/Keras for MLP) and restart the app."
+            )
+            return
+
         model_meta = data["model_registry"][model_name]
 
         if model_meta.get("feature_space") == "safe":

@@ -1,0 +1,1201 @@
+{
+  "interactive_features": [
+    "RESTATUS",
+    "DWgt_R",
+    "BMI",
+    "WTGAIN",
+    "FAGECOMB",
+    "PREVIS",
+    "PWgt_R",
+    "MAGER",
+    "WIC"
+  ],
+  "full_baseline": {
+    "DOB_YY": 2024.0,
+    "DOB_MM": 7.0,
+    "DOB_TT": 1229.0,
+    "DOB_WK": 4.0,
+    "BFACIL": 1.0,
+    "F_BFACIL": 1.0,
+    "BFACIL3": 1.0,
+    "MAGE_IMPFLG": "1",
+    "MAGE_REPFLG": "1",
+    "MAGER": 30.0,
+    "MAGER14": 10.0,
+    "MAGER9": 5.0,
+    "MBSTATE_REC": 1.0,
+    "RESTATUS": 1.0,
+    "MRACE31": 1.0,
+    "MRACE6": 1.0,
+    "MRACE15": 1.0,
+    "MRACEIMP": "1",
+    "MHISPX": 0.0,
+    "MHISP_R": 0.0,
+    "F_MHISP": 1.0,
+    "MRACEHISP": 2.0,
+    "MAR_P": "X",
+    "DMAR": "1",
+    "MAR_IMP": "1",
+    "F_MAR_P": 1.0,
+    "MEDUC": 4.0,
+    "F_MEDUC": 1.0,
+    "FAGERPT_FLG": "1",
+    "FAGECOMB": 33.0,
+    "FAGEREC11": 5.0,
+    "FRACE31": 1.0,
+    "FRACE6": 1.0,
+    "FRACE15": 1.0,
+    "FHISPX": 0.0,
+    "FHISP_R": 0.0,
+    "F_FHISP": 1.0,
+    "FRACEHISP": 2.0,
+    "FEDUC": 4.0,
+    "F_FEDUC": 1.0,
+    "PRIORLIVE": 1.0,
+    "PRIORDEAD": 0.0,
+    "PRIORTERM": 0.0,
+    "LBO_REC": 2.0,
+    "TBO_REC": 2.0,
+    "ILLB_R": 88.0,
+    "ILLB_R11": 8.0,
+    "ILOP_R": 888.0,
+    "ILOP_R11": 88.0,
+    "ILP_R": 77.0,
+    "ILP_R11": 8.0,
+    "PRECARE": 3.0,
+    "F_MPCB": 1.0,
+    "PRECARE5": 1.0,
+    "PREVIS": 11.0,
+    "PREVIS_REC": 7.0,
+    "F_TPCV": 1.0,
+    "WIC": "N",
+    "F_WIC": 1.0,
+    "CIG_0": 0.0,
+    "CIG_1": 0.0,
+    "CIG_2": 0.0,
+    "CIG_3": 0.0,
+    "CIG_REC": "N",
+    "M_Ht_In": 64.0,
+    "BMI": 26.6,
+    "BMI_R": 3.0,
+    "PWgt_R": 155.0,
+    "F_PWGT": 1.0,
+    "DWgt_R": 185.0,
+    "F_DWGT": 1.0,
+    "WTGAIN": 29.0,
+    "WTGAIN_REC": 3.0,
+    "SEX": "M",
+    "DLMP_MM": 7.0,
+    "DLMP_YY": 2023.0,
+    "COMBGEST": 39.0,
+    "GESTREC10": 7.0,
+    "GESTREC3": 2.0,
+    "OEGest_Comb": 39.0,
+    "DBWT": 3281.0,
+    "BWTR12": 7.0,
+    "BWTR4": 3.0,
+    "ITRAN": "N",
+    "ILIVE": "Y",
+    "BFED": "Y",
+    "F_BFED": 1.0
+  },
+  "full_schema": {
+    "DOB_YY": {
+      "type": "numeric",
+      "min": 2024.0,
+      "max": 2024.0,
+      "default": 2024.0
+    },
+    "DOB_MM": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 12.0,
+      "default": 7.0
+    },
+    "DOB_TT": {
+      "type": "numeric",
+      "min": 18.0,
+      "max": 2342.0,
+      "default": 1229.0
+    },
+    "DOB_WK": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 7.0,
+      "default": 4.0
+    },
+    "BFACIL": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 3.0,
+      "default": 1.0
+    },
+    "F_BFACIL": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "BFACIL3": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 2.0,
+      "default": 1.0
+    },
+    "MAGE_IMPFLG": {
+      "type": "categorical",
+      "options": [
+        "1"
+      ],
+      "default": "1"
+    },
+    "MAGE_REPFLG": {
+      "type": "categorical",
+      "options": [
+        "1"
+      ],
+      "default": "1"
+    },
+    "MAGER": {
+      "type": "numeric",
+      "min": 17.0,
+      "max": 42.0,
+      "default": 30.0
+    },
+    "MAGER14": {
+      "type": "numeric",
+      "min": 5.0,
+      "max": 12.0,
+      "default": 10.0
+    },
+    "MAGER9": {
+      "type": "numeric",
+      "min": 2.0,
+      "max": 7.0,
+      "default": 5.0
+    },
+    "MBSTATE_REC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 2.0,
+      "default": 1.0
+    },
+    "RESTATUS": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 3.0,
+      "default": 1.0
+    },
+    "MRACE31": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 13.0,
+      "default": 1.0
+    },
+    "MRACE6": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 6.0,
+      "default": 1.0
+    },
+    "MRACE15": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 15.0,
+      "default": 1.0
+    },
+    "MRACEIMP": {
+      "type": "categorical",
+      "options": [
+        "1"
+      ],
+      "default": "1"
+    },
+    "MHISPX": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 6.0,
+      "default": 0.0
+    },
+    "MHISP_R": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "default": 0.0
+    },
+    "F_MHISP": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "MRACEHISP": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 7.0,
+      "default": 2.0
+    },
+    "MAR_P": {
+      "type": "categorical",
+      "options": [
+        "X",
+        "Y",
+        "N",
+        "U"
+      ],
+      "default": "X"
+    },
+    "DMAR": {
+      "type": "categorical",
+      "options": [
+        "1",
+        "2"
+      ],
+      "default": "1"
+    },
+    "MAR_IMP": {
+      "type": "categorical",
+      "options": [
+        "1"
+      ],
+      "default": "1"
+    },
+    "F_MAR_P": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "MEDUC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 9.0,
+      "default": 4.0
+    },
+    "F_MEDUC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "FAGERPT_FLG": {
+      "type": "categorical",
+      "options": [
+        "1"
+      ],
+      "default": "1"
+    },
+    "FAGECOMB": {
+      "type": "numeric",
+      "min": 19.0,
+      "max": 99.0,
+      "default": 33.0
+    },
+    "FAGEREC11": {
+      "type": "numeric",
+      "min": 2.0,
+      "max": 11.0,
+      "default": 5.0
+    },
+    "FRACE31": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 99.0,
+      "default": 1.0
+    },
+    "FRACE6": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 9.0,
+      "default": 1.0
+    },
+    "FRACE15": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 99.0,
+      "default": 1.0
+    },
+    "FHISPX": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 9.0,
+      "default": 0.0
+    },
+    "FHISP_R": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 9.0,
+      "default": 0.0
+    },
+    "F_FHISP": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "FRACEHISP": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 8.0,
+      "default": 2.0
+    },
+    "FEDUC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 9.0,
+      "default": 4.0
+    },
+    "F_FEDUC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "PRIORLIVE": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 6.0,
+      "default": 1.0
+    },
+    "PRIORDEAD": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0
+    },
+    "PRIORTERM": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "default": 0.0
+    },
+    "LBO_REC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 8.0,
+      "default": 2.0
+    },
+    "TBO_REC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 8.0,
+      "default": 2.0
+    },
+    "ILLB_R": {
+      "type": "numeric",
+      "min": 3.0,
+      "max": 999.0,
+      "default": 88.0
+    },
+    "ILLB_R11": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 99.0,
+      "default": 8.0
+    },
+    "ILOP_R": {
+      "type": "numeric",
+      "min": 10.0,
+      "max": 999.0,
+      "default": 888.0
+    },
+    "ILOP_R11": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 99.0,
+      "default": 88.0
+    },
+    "ILP_R": {
+      "type": "numeric",
+      "min": 3.0,
+      "max": 999.0,
+      "default": 77.0
+    },
+    "ILP_R11": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 99.0,
+      "default": 8.0
+    },
+    "PRECARE": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 99.0,
+      "default": 3.0
+    },
+    "F_MPCB": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "PRECARE5": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 5.0,
+      "default": 1.0
+    },
+    "PREVIS": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 99.0,
+      "default": 11.0
+    },
+    "PREVIS_REC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 12.0,
+      "default": 7.0
+    },
+    "F_TPCV": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "WIC": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y",
+        "U"
+      ],
+      "default": "N"
+    },
+    "F_WIC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "CIG_0": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 20.0,
+      "default": 0.0
+    },
+    "CIG_1": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 20.0,
+      "default": 0.0
+    },
+    "CIG_2": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 10.0,
+      "default": 0.0
+    },
+    "CIG_3": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 60.0,
+      "default": 0.0
+    },
+    "CIG_REC": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y",
+        "U"
+      ],
+      "default": "N"
+    },
+    "M_Ht_In": {
+      "type": "numeric",
+      "min": 57.0,
+      "max": 72.0,
+      "default": 64.0
+    },
+    "BMI": {
+      "type": "numeric",
+      "min": 17.4,
+      "max": 99.9,
+      "default": 26.6
+    },
+    "BMI_R": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 9.0,
+      "default": 3.0
+    },
+    "PWgt_R": {
+      "type": "numeric",
+      "min": 98.0,
+      "max": 999.0,
+      "default": 155.0
+    },
+    "F_PWGT": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "DWgt_R": {
+      "type": "numeric",
+      "min": 120.0,
+      "max": 999.0,
+      "default": 185.0
+    },
+    "F_DWGT": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "WTGAIN": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 99.0,
+      "default": 29.0
+    },
+    "WTGAIN_REC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 9.0,
+      "default": 3.0
+    },
+    "SEX": {
+      "type": "categorical",
+      "options": [
+        "M",
+        "F"
+      ],
+      "default": "M"
+    },
+    "DLMP_MM": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 99.0,
+      "default": 7.0
+    },
+    "DLMP_YY": {
+      "type": "numeric",
+      "min": 2023.0,
+      "max": 9999.0,
+      "default": 2023.0
+    },
+    "COMBGEST": {
+      "type": "numeric",
+      "min": 29.0,
+      "max": 44.0,
+      "default": 39.0
+    },
+    "GESTREC10": {
+      "type": "numeric",
+      "min": 3.0,
+      "max": 10.0,
+      "default": 7.0
+    },
+    "GESTREC3": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 2.0,
+      "default": 2.0
+    },
+    "OEGest_Comb": {
+      "type": "numeric",
+      "min": 29.0,
+      "max": 41.0,
+      "default": 39.0
+    },
+    "DBWT": {
+      "type": "numeric",
+      "min": 1290.0,
+      "max": 4500.0,
+      "default": 3281.0
+    },
+    "BWTR12": {
+      "type": "numeric",
+      "min": 3.0,
+      "max": 10.0,
+      "default": 7.0
+    },
+    "BWTR4": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 3.0,
+      "default": 3.0
+    },
+    "ITRAN": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y",
+        "U"
+      ],
+      "default": "N"
+    },
+    "ILIVE": {
+      "type": "categorical",
+      "options": [
+        "Y",
+        "N",
+        "U"
+      ],
+      "default": "Y"
+    },
+    "BFED": {
+      "type": "categorical",
+      "options": [
+        "Y",
+        "N",
+        "U"
+      ],
+      "default": "Y"
+    },
+    "F_BFED": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0
+    }
+  },
+  "safe_baseline": {
+    "DOB_YY": 2024.0,
+    "DOB_MM": 7.0,
+    "DOB_TT": 1229.0,
+    "DOB_WK": 4.0,
+    "BFACIL": 1.0,
+    "F_BFACIL": 1.0,
+    "BFACIL3": 1.0,
+    "MAGE_IMPFLG": "1",
+    "MAGE_REPFLG": "1",
+    "MAGER": 30.0,
+    "MAGER14": 10.0,
+    "MAGER9": 5.0,
+    "MBSTATE_REC": 1.0,
+    "RESTATUS": 1.0,
+    "MRACE31": 1.0,
+    "MRACE6": 1.0,
+    "MRACE15": 1.0,
+    "MRACEIMP": "1",
+    "MHISPX": 0.0,
+    "MHISP_R": 0.0,
+    "F_MHISP": 1.0,
+    "MRACEHISP": 2.0,
+    "MAR_P": "X",
+    "DMAR": "1",
+    "MAR_IMP": "1",
+    "F_MAR_P": 1.0,
+    "MEDUC": 4.0,
+    "F_MEDUC": 1.0,
+    "FAGERPT_FLG": "1",
+    "FAGECOMB": 33.0,
+    "FAGEREC11": 5.0,
+    "FRACE31": 1.0,
+    "FRACE6": 1.0,
+    "FRACE15": 1.0,
+    "FHISPX": 0.0,
+    "FHISP_R": 0.0,
+    "F_FHISP": 1.0,
+    "FRACEHISP": 2.0,
+    "FEDUC": 4.0,
+    "F_FEDUC": 1.0,
+    "PRIORLIVE": 1.0,
+    "PRIORDEAD": 0.0,
+    "PRIORTERM": 0.0,
+    "LBO_REC": 2.0,
+    "TBO_REC": 2.0,
+    "ILLB_R": 88.0,
+    "ILLB_R11": 8.0,
+    "ILOP_R": 888.0,
+    "ILOP_R11": 88.0,
+    "ILP_R": 77.0,
+    "ILP_R11": 8.0,
+    "PRECARE": 3.0,
+    "F_MPCB": 1.0,
+    "PRECARE5": 1.0,
+    "PREVIS": 11.0,
+    "PREVIS_REC": 7.0,
+    "F_TPCV": 1.0,
+    "WIC": "N",
+    "F_WIC": 1.0,
+    "CIG_0": 0.0,
+    "CIG_1": 0.0,
+    "CIG_2": 0.0,
+    "CIG_3": 0.0,
+    "CIG_REC": "N",
+    "M_Ht_In": 64.0,
+    "BMI": 26.6,
+    "BMI_R": 3.0,
+    "PWgt_R": 155.0,
+    "F_PWGT": 1.0,
+    "DWgt_R": 185.0,
+    "F_DWGT": 1.0,
+    "WTGAIN": 29.0,
+    "WTGAIN_REC": 3.0,
+    "DLMP_MM": 7.0,
+    "DLMP_YY": 2023.0
+  },
+  "safe_schema": {
+    "DOB_YY": {
+      "type": "numeric",
+      "min": 2024.0,
+      "max": 2024.0,
+      "default": 2024.0
+    },
+    "DOB_MM": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 12.0,
+      "default": 7.0
+    },
+    "DOB_TT": {
+      "type": "numeric",
+      "min": 18.0,
+      "max": 2342.0,
+      "default": 1229.0
+    },
+    "DOB_WK": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 7.0,
+      "default": 4.0
+    },
+    "BFACIL": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 3.0,
+      "default": 1.0
+    },
+    "F_BFACIL": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "BFACIL3": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 2.0,
+      "default": 1.0
+    },
+    "MAGE_IMPFLG": {
+      "type": "categorical",
+      "options": [
+        "1"
+      ],
+      "default": "1"
+    },
+    "MAGE_REPFLG": {
+      "type": "categorical",
+      "options": [
+        "1"
+      ],
+      "default": "1"
+    },
+    "MAGER": {
+      "type": "numeric",
+      "min": 17.0,
+      "max": 42.0,
+      "default": 30.0
+    },
+    "MAGER14": {
+      "type": "numeric",
+      "min": 5.0,
+      "max": 12.0,
+      "default": 10.0
+    },
+    "MAGER9": {
+      "type": "numeric",
+      "min": 2.0,
+      "max": 7.0,
+      "default": 5.0
+    },
+    "MBSTATE_REC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 2.0,
+      "default": 1.0
+    },
+    "RESTATUS": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 3.0,
+      "default": 1.0
+    },
+    "MRACE31": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 13.0,
+      "default": 1.0
+    },
+    "MRACE6": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 6.0,
+      "default": 1.0
+    },
+    "MRACE15": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 15.0,
+      "default": 1.0
+    },
+    "MRACEIMP": {
+      "type": "categorical",
+      "options": [
+        "1"
+      ],
+      "default": "1"
+    },
+    "MHISPX": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 6.0,
+      "default": 0.0
+    },
+    "MHISP_R": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "default": 0.0
+    },
+    "F_MHISP": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "MRACEHISP": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 7.0,
+      "default": 2.0
+    },
+    "MAR_P": {
+      "type": "categorical",
+      "options": [
+        "X",
+        "Y",
+        "N",
+        "U"
+      ],
+      "default": "X"
+    },
+    "DMAR": {
+      "type": "categorical",
+      "options": [
+        "1",
+        "2"
+      ],
+      "default": "1"
+    },
+    "MAR_IMP": {
+      "type": "categorical",
+      "options": [
+        "1"
+      ],
+      "default": "1"
+    },
+    "F_MAR_P": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "MEDUC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 9.0,
+      "default": 4.0
+    },
+    "F_MEDUC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "FAGERPT_FLG": {
+      "type": "categorical",
+      "options": [
+        "1"
+      ],
+      "default": "1"
+    },
+    "FAGECOMB": {
+      "type": "numeric",
+      "min": 19.0,
+      "max": 99.0,
+      "default": 33.0
+    },
+    "FAGEREC11": {
+      "type": "numeric",
+      "min": 2.0,
+      "max": 11.0,
+      "default": 5.0
+    },
+    "FRACE31": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 99.0,
+      "default": 1.0
+    },
+    "FRACE6": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 9.0,
+      "default": 1.0
+    },
+    "FRACE15": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 99.0,
+      "default": 1.0
+    },
+    "FHISPX": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 9.0,
+      "default": 0.0
+    },
+    "FHISP_R": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 9.0,
+      "default": 0.0
+    },
+    "F_FHISP": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "FRACEHISP": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 8.0,
+      "default": 2.0
+    },
+    "FEDUC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 9.0,
+      "default": 4.0
+    },
+    "F_FEDUC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "PRIORLIVE": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 6.0,
+      "default": 1.0
+    },
+    "PRIORDEAD": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 1.0,
+      "default": 0.0
+    },
+    "PRIORTERM": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "default": 0.0
+    },
+    "LBO_REC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 8.0,
+      "default": 2.0
+    },
+    "TBO_REC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 8.0,
+      "default": 2.0
+    },
+    "ILLB_R": {
+      "type": "numeric",
+      "min": 3.0,
+      "max": 999.0,
+      "default": 88.0
+    },
+    "ILLB_R11": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 99.0,
+      "default": 8.0
+    },
+    "ILOP_R": {
+      "type": "numeric",
+      "min": 10.0,
+      "max": 999.0,
+      "default": 888.0
+    },
+    "ILOP_R11": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 99.0,
+      "default": 88.0
+    },
+    "ILP_R": {
+      "type": "numeric",
+      "min": 3.0,
+      "max": 999.0,
+      "default": 77.0
+    },
+    "ILP_R11": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 99.0,
+      "default": 8.0
+    },
+    "PRECARE": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 99.0,
+      "default": 3.0
+    },
+    "F_MPCB": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "PRECARE5": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 5.0,
+      "default": 1.0
+    },
+    "PREVIS": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 99.0,
+      "default": 11.0
+    },
+    "PREVIS_REC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 12.0,
+      "default": 7.0
+    },
+    "F_TPCV": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "WIC": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y",
+        "U"
+      ],
+      "default": "N"
+    },
+    "F_WIC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "CIG_0": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 20.0,
+      "default": 0.0
+    },
+    "CIG_1": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 20.0,
+      "default": 0.0
+    },
+    "CIG_2": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 10.0,
+      "default": 0.0
+    },
+    "CIG_3": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 60.0,
+      "default": 0.0
+    },
+    "CIG_REC": {
+      "type": "categorical",
+      "options": [
+        "N",
+        "Y",
+        "U"
+      ],
+      "default": "N"
+    },
+    "M_Ht_In": {
+      "type": "numeric",
+      "min": 57.0,
+      "max": 72.0,
+      "default": 64.0
+    },
+    "BMI": {
+      "type": "numeric",
+      "min": 17.4,
+      "max": 99.9,
+      "default": 26.6
+    },
+    "BMI_R": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 9.0,
+      "default": 3.0
+    },
+    "PWgt_R": {
+      "type": "numeric",
+      "min": 98.0,
+      "max": 999.0,
+      "default": 155.0
+    },
+    "F_PWGT": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "DWgt_R": {
+      "type": "numeric",
+      "min": 120.0,
+      "max": 999.0,
+      "default": 185.0
+    },
+    "F_DWGT": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 1.0,
+      "default": 1.0
+    },
+    "WTGAIN": {
+      "type": "numeric",
+      "min": 0.0,
+      "max": 99.0,
+      "default": 29.0
+    },
+    "WTGAIN_REC": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 9.0,
+      "default": 3.0
+    },
+    "DLMP_MM": {
+      "type": "numeric",
+      "min": 1.0,
+      "max": 99.0,
+      "default": 7.0
+    },
+    "DLMP_YY": {
+      "type": "numeric",
+      "min": 2023.0,
+      "max": 9999.0,
+      "default": 2023.0
+    }
+  },
+  "notes": "Models are pre-trained in notebook; Streamlit must only load and infer."
+}

@@ -1,0 +1,33 @@
+{
+  "Logistic Regression": {
+    "type": "sklearn",
+    "path": "models/logistic_regression.joblib",
+    "feature_space": "full"
+  },
+  "Decision Tree": {
+    "type": "sklearn",
+    "path": "models/decision_tree.joblib",
+    "feature_space": "full"
+  },
+  "Random Forest": {
+    "type": "sklearn",
+    "path": "models/random_forest.joblib",
+    "feature_space": "full"
+  },
+  "XGBoost": {
+    "type": "sklearn",
+    "path": "models/xgboost.joblib",
+    "feature_space": "full"
+  },
+  "Leakage-safe Random Forest": {
+    "type": "sklearn",
+    "path": "models/leakage_safe_random_forest.joblib",
+    "feature_space": "safe"
+  },
+  "MLP (Keras)": {
+    "type": "keras",
+    "path": "models/mlp.keras",
+    "preprocessor_path": "models/mlp_preprocessor.joblib",
+    "feature_space": "full"
+  }
+}

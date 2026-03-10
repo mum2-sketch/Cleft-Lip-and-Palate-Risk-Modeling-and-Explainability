@@ -1,0 +1,36 @@
+{
+  "Logistic Regression": {
+    "class_weight": "balanced",
+    "max_iter": 1000
+  },
+  "Decision Tree": {
+    "model__max_depth": 7,
+    "model__min_samples_leaf": 5
+  },
+  "Random Forest": {
+    "model__max_depth": 3,
+    "model__n_estimators": 200
+  },
+  "XGBoost": {
+    "model__learning_rate": 0.01,
+    "model__max_depth": 3,
+    "model__n_estimators": 100,
+    "cv_scoring": "average_precision",
+    "f1_opt_threshold": 0.619853138923645,
+    "recall_first_threshold": 0.33416947722435,
+    "recall_first_target": 0.8
+  },
+  "MLP (Keras)": {
+    "layers": [
+      128,
+      128
+    ],
+    "epochs": 15,
+    "batch_size": 256,
+    "optimizer": "Adam",
+    "validation_thresholding": true,
+    "f1_opt_threshold": 0.8203067779541016,
+    "recall_first_threshold": 0.0007672280771657825,
+    "recall_first_target": 0.8
+  }
+}

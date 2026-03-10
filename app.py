@@ -370,16 +370,16 @@ def main():
             )
             st.table(dataset_metrics)
 
-            with st.expander("Full Data Dictionary", expanded=False):
-                dd = data.get("data_dictionary")
-                if dd is not None and len(dd) > 0:
-                    st.caption(f"Loaded exported data dictionary with {len(dd):,} rows.")
-                    st.dataframe(dd, use_container_width=True, height=600)
-                else:
-                    st.error(
-                        "Full data dictionary artifact is missing. "
-                        "Re-run the notebook export step to write `streamlit_artifacts/data_dictionary.pkl`."
-                    )
+            st.markdown("#### Full Data Dictionary")
+            dd = data.get("data_dictionary")
+            if dd is not None and len(dd) > 0:
+                st.caption(f"Loaded exported data dictionary with {len(dd):,} rows.")
+                st.dataframe(dd, use_container_width=True, height=600)
+            else:
+                st.error(
+                    "Full data dictionary artifact is missing. "
+                    "Re-run the notebook export step to write `streamlit_artifacts/data_dictionary.pkl`."
+                )
 
         with st.expander("Why This Problem Matters", expanded=False):
             st.markdown(

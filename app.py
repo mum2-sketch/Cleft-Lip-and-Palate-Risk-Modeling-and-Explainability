@@ -1029,7 +1029,13 @@ def main():
             st.info("Leakage-safe Random Forest artifacts are not available in this build.")
 
         st.subheader("Interactive Prediction")
-        model_name = st.selectbox("Select model", options=list(models.keys()))
+
+        model_options = list(models.keys())
+        if not model_options:
+            st.error("No models loaded. Verify artifact files and dependencies, then reload the app.")
+            return
+
+        model_name = st.selectbox("Select model", options=model_options)
         model_meta = data["model_registry"][model_name]
 
         if model_meta.get("feature_space") == "safe":

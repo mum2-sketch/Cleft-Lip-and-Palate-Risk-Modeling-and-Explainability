@@ -11,21 +11,21 @@ import shap
 import streamlit as st
 from sklearn.impute import SimpleImputer
 
-try:
+
+def resolve_keras_module():
     # Some Windows Python setups need stdlib distutils behavior for TensorFlow imports.
     os.environ.setdefault("SETUPTOOLS_USE_DISTUTILS", "stdlib")
-    _tf_spec = importlib.util.find_spec("tensorflow")
-    _keras_spec = importlib.util.find_spec("keras")
-    if _tf_spec is not None:
-        keras = importlib.import_module("tensorflow.keras")
-        HAS_TF = True
-    elif _keras_spec is not None:
-        keras = importlib.import_module("keras")
-        HAS_TF = True
-    else:
-        HAS_TF = False
-except Exception:
-    HAS_TF = False
+    for mod_name in ("tensorflow.keras", "keras"):
+        try:
+            if importlib.util.find_spec(mod_name.split(".")[0]) is not None:
+                return importlib.import_module(mod_name)
+        except Exception:
+            continue
+    return None
+
+
+KERAS_MOD = resolve_keras_module()
+HAS_TF = KERAS_MOD is not None
 
 st.set_page_config(page_title="Predicting U.S. Cleft Lip and Palate Cases", layout="wide")
 
@@ -133,15 +133,26 @@ def load_models(model_registry):
         walk(obj)
         return obj
 
+    def load_keras_bundle(meta):
+        km = resolve_keras_module()
+        if km is None:
+            return None
+        return {
+            "model": km.models.load_model(ART_DIR / meta["path"], compile=False),
+            "preprocessor": repair_sklearn_compat(joblib.load(ART_DIR / meta["preprocessor_path"])),
+        }
+
     loaded = {}
     for name, meta in model_registry.items():
         if meta["type"] == "sklearn":
             loaded[name] = repair_sklearn_compat(joblib.load(ART_DIR / meta["path"]))
-        elif meta["type"] == "keras" and HAS_TF:
-            loaded[name] = {
-                "model": keras.models.load_model(ART_DIR / meta["path"]),
-                "preprocessor": repair_sklearn_compat(joblib.load(ART_DIR / meta["preprocessor_path"])),
-            }
+        elif meta["type"] == "keras":
+            try:
+                bundle = load_keras_bundle(meta)
+                if bundle is not None:
+                    loaded[name] = bundle
+            except Exception:
+                pass
     return loaded
 
 
@@ -1044,9 +1055,22 @@ def main():
 
         model_name = st.selectbox("Select model", options=model_options)
         if model_name not in models:
-            st.error(
-                f"`{model_name}` is registered but could not be loaded in this runtime. "
-                "Verify required dependencies are installed (TensorFlow/Keras for MLP) and restart the app."
+            selected_meta = data["model_registry"][model_name]
+            if selected_meta.get("type") == "keras":
+                try:
+                    km = resolve_keras_module()
+                    if km is not None:
+                        models[model_name] = {
+                            "model": km.models.load_model(ART_DIR / selected_meta["path"], compile=False),
+                            "preprocessor": joblib.load(ART_DIR / selected_meta["preprocessor_path"]),
+                        }
+                except Exception:
+                    pass
+
+        if model_name not in models:
+            st.info(
+                f"`{model_name}` is registered but unavailable in this runtime. "
+                "Install matching TensorFlow/Keras dependencies and restart the app."
             )
             return
 
